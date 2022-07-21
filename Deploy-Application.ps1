@@ -121,7 +121,7 @@ Try {
 		Show-InstallationWelcome -CloseApps 'multisim,ultiboard,nilauncher,nilicensemanager,nipackagemanager,labview' -CloseAppsCountdown 60 -CheckDiskSpace -PersistPrompt
 
 		## Show Progress Message (with the default message)
-		Show-InstallationProgress
+		Show-InstallationProgress -StatusMessage "Installing NI Package Manager"
 
 		## <Perform Pre-Installation tasks here>
 
@@ -163,7 +163,7 @@ Try {
 		Show-InstallationWelcome -CloseApps 'multisim,ultiboard,nilauncher,nilicensemanager,nipackagemanager,labview' -CloseAppsCountdown 60 -CheckDiskSpace -PersistPrompt
 
 		## Show Progress Message (with the default message)
-		Show-InstallationProgress
+		Show-InstallationProgress -StatusMessage "Uninstalling NI Package Manager"
 
 		## <Perform Pre-Uninstallation tasks here>
 
@@ -257,8 +257,8 @@ Catch {
 # SIG # Begin signature block
 # MIImVgYJKoZIhvcNAQcCoIImRzCCJkMCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCC/bLtIjnYpLCun
-# /kDr3iu3EA8+4AaGrWj2D3LHuOoxuKCCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCB6Cm/Q+FZCH9Pf
+# 62iL5sNbL/xl63nizHf4fsyW5/Oo7KCCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
 # jTanyYqJ1pQWMA0GCSqGSIb3DQEBDAUAMHsxCzAJBgNVBAYTAkdCMRswGQYDVQQI
 # DBJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcMB1NhbGZvcmQxGjAYBgNVBAoM
 # EUNvbW9kbyBDQSBMaW1pdGVkMSEwHwYDVQQDDBhBQUEgQ2VydGlmaWNhdGUgU2Vy
@@ -432,32 +432,32 @@ Catch {
 # ZDErMCkGA1UEAxMiU2VjdGlnbyBQdWJsaWMgQ29kZSBTaWduaW5nIENBIFIzNgIR
 # AKVN33D73PFMVIK48rFyyjEwDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIB
 # DDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEE
-# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgrNw+yNPiH8GH
-# A4psr98bsOghjWiKX6pDxUHLdRRZtwIwDQYJKoZIhvcNAQEBBQAEggGABLsJlc3w
-# 8/nuNZOKHcCjdzQwapWKLtItfQyR2Zmb/B3LAFVvWfYyR/93LLzRMD+RHHSbiL9v
-# aKyqiBMGPjjg4R9WdVjV3LpNzSKpU+6s8NUdCHL2DamEwsE3AoeHY+Cq3if4knrw
-# MSeF37QZ4W9E7odDU1O2VuAcjtyb+dv1yBnaeUohk9F762zJfjMcfcyRkS6s+5xC
-# BiEDHrfxYOY6/hu0PMkuvsTm5OKNgkBQA7cH+0q/9Il088wtvwN9ZWccDsrEez/g
-# 5qfd+DHFS1tJRxI78AT04xNRsrnD+Ygi+VYqUakOS0Eu2TfLqqNR/4b1RSQGdawE
-# SvqLvfvv+JchEWPKZVofdn2CTnDytG33prVvTctvKzlbp+krESCPma+hBwbbXyGt
-# 89o5W716NcR5wF1cy9qAHoWrH1HiEGOdfKWKC5H00pTOnGpuHzK4W8PNP5zobrwB
-# YmgKYLoutXf9Ryu89K2Vfz3ik6j4bdLUSKImqyjnBNpqWqkaTTE5ZN0xoYIDTDCC
+# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQg5QhooDZLPMAb
+# asC/5YvbmzCsT/fbjg40UbcNQN/zcZswDQYJKoZIhvcNAQEBBQAEggGANE7s8dCb
+# vFzfY5bm3iE1//pZlJLKMDsaVDwr30HXuXCVNV3bBdYciS0pC+fYWE7rs3eIi4yJ
+# 1yHbXqQCcCNveyGmxY9G4j8iq1wi/vnwdhGhx7EloYqApebZJtKuCWXccAO/Do0i
+# gQewmPMeCVPjD3TBreiE5Tjp1CeI7amL+WMTu6bCs0WnELkmpaPZObJ7+brAc1Le
+# 5bDfuxyJcyCai8wJEgQD54FwEOQz1TfOEr19LzSQcoV1BBjZsQOUL1IbX1hN8j1u
+# 0wtrZ8351d8/Nx1G48U236zJk8JlUZQvKHRUagZELei0DudtrePE8E0xLzTK9qx9
+# GLq+1xfECuuFWBlwUJTtCDywBCTNvW9PSJ/VqwF3GCvmlezhuW1zOrCf85SkrED+
+# 84Eyr6Kkq4Bn8QahcMnasdlvyDXRKh6wl6MujyeVwfg0DXv2X98f2PGcIao5ur43
+# hRxdJL08juX+qikEGKVmhRk1FFijpkxoln33/Jss20/zh+xF/GBqKumZoYIDTDCC
 # A0gGCSqGSIb3DQEJBjGCAzkwggM1AgEBMIGSMH0xCzAJBgNVBAYTAkdCMRswGQYD
 # VQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGDAWBgNV
 # BAoTD1NlY3RpZ28gTGltaXRlZDElMCMGA1UEAxMcU2VjdGlnbyBSU0EgVGltZSBT
 # dGFtcGluZyBDQQIRAJA5f5rSSjoT8r2RXwg4qUMwDQYJYIZIAWUDBAICBQCgeTAY
-# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMjA3MDcw
-# MDM5MzZaMD8GCSqGSIb3DQEJBDEyBDCX8ELyY63BSe19Wcdps4xDjmvO1gUg/d0b
-# MmMOwpSoAG2T8zW99sl/H9Js3kIZmAQwDQYJKoZIhvcNAQEBBQAEggIAOrSS6cuZ
-# Vi7+EdEEl+cF5tTx97m0r2JY4Vs017siGRo/fwOB/CyBXWMCmYVZLHriXAKmNvq0
-# o4wmoI4K13mR+jHVxVRSUgRiithgjPPRzKTYURaaEGAsocM8VTiHbAad7q7LjGvk
-# KANyQbs5JVGi6E09gVpDpP+lFLzFnyd5ErzrXNoNW+5PJu8yLB5RdIcxTUMe8uU/
-# CkoMZk67KjF7Lz9X488LUZbVqgBoOL3Rn9Bu/9H8EpGq1W5l4CELiziCyTDIraHz
-# nP9mPDQJqfl/nKtPvEcGKLjqNYlaqmksn6XEvX+FZ1yPbc1egjE1p6VN8vIdt0zQ
-# Ltu1u2ZAxh9Wngo06EhMC50RrJvSYHnLC1C0yhaGNQzhO/a0SXfMYX7ATeku+7rW
-# emVmcdizLUhabevGChKkWo/U79bjyqhLDvHCINjiy4QY4wsy3fX0qm7ohIphjeJ3
-# 1iApqS1FbxdYbVpi5UejL+5As0eO9FqrNyyr5AI6/tf37B+5+KYWamLE08K1WZPl
-# tU+Awqz+EWQRuCz69r7NPyGprvqwYwhks4PrLDtxdIwomWjF4EplvJYja19FhcVx
-# husVjrC8txE6XHswnIbaKQIr85oA730BE600rD373RwSwitgjvJpYckQke1CQKt7
-# Q0BSWD248Scf7Hj3StLp2w8eGVYYmag8kz0=
+# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMjA3MTQy
+# MDQxMDVaMD8GCSqGSIb3DQEJBDEyBDClHI8XR38XOTGCM0S/sPiSoO5qfdJcaPt5
+# p/g4w9pfUCF9dOFB3AviuljTrQRpqXUwDQYJKoZIhvcNAQEBBQAEggIAKPa7V1e2
+# DJIYqZb555ib4n6ActTtU007a2gc5tqOP089Et6fqOPAlaGWFynDRvSu+9SDbGRS
+# QgCTZnD9bjT7kKn4HluWpSMpMvqg4XFVlB56koVhqJHQXAlkHXhKazoyExSunMli
+# jPcffa7XLWRNML/UwTOnMcO6vehU/FHieEBcm+225KNxutIMuLuVhtOVW7Iawnvt
+# XG83wYOfpxdbNB+VXRBd3NkHgu1pblpo6xJSFyyzmffsvo+NCPuDWNWJs/S4lSbX
+# CYmxkW1boCnz9th/Vsr6UjnWOAzIUD7lgabXfwr0dqcMGtz/IN7x8eA4G+a9KrPt
+# ZJzi7Dkc4CbOJfNzhMAe1667jeN81WzmdmAl6BHWCN7qIIfWPbca0xnXjNbSfQhV
+# LE4EV8+ewNNGQKj5uFTI+5v0uHXtZVTQ7PuyeYrfiyoVIXJlCzilKxSXBuGlC5E6
+# CIkQ3LUSv/RgikUdbm/Kf0A0ot2+OugwSo17lko2/4ITDCbGSrjeG466kPiqVVNG
+# Bl3+Fc+IIg5EdNrxWlBbSotsxF19lwAhXMH6VtQNowEp38SHpoaXaXfyt3fYw236
+# 2HzmsMKngZOyNOdCLJ6CEjy2CvUGQp0rGil7TlwY6mB4W7nLzxv7elM9nHdaiqVy
+# W2w6XKS/yokiML0q1aukfM0geLeY+aVU860=
 # SIG # End signature block
