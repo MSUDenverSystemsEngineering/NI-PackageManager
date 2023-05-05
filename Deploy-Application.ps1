@@ -64,13 +64,13 @@ Try {
 	## Variables: Application
 	[string]$appVendor = 'NI'
 	[string]$appName = 'Package Manager'
-	[string]$appVersion = '21.8.0'
+	[string]$appVersion = '23.3.0'
 	[string]$appArch = 'x64'
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
 	[string]$appScriptVersion = '1.0.0'
-	[string]$appScriptDate = '7/6/2022'
-	[string]$appScriptAuthor = 'Ryan McKenna'
+	[string]$appScriptDate = '05/05/2023'
+	[string]$appScriptAuthor = 'Will Jarvill'
 	##*===============================================
 	## Variables: Install Titles (Only set here to override defaults set by the toolkit)
 	[string]$installName = ''
@@ -139,7 +139,7 @@ Try {
 
 		## <Perform Installation tasks here>
 
-		$MainExitCode = Execute-Process "$dirFiles\nipackagemanager21.8.0_online.exe" -Parameters "--quiet --accept-eulas --prevent-reboot"
+		$MainExitCode = Execute-Process "$dirFiles\nipackagemanager23.3.0_online.exe" -Parameters "--quiet --accept-eulas --prevent-reboot"
 
 
 		##*===============================================
@@ -228,7 +228,7 @@ Try {
 		}
 		## <Perform Repair tasks here>
 
-		$MainExitCode = Execute-Process "$dirFiles\nipackagemanager21.8.0_online.exe" -Parameters "repair --quiet --yes --include-recommended"
+		$MainExitCode = Execute-Process "$dirFiles\nipackagemanager23.3.0_online.exe" -Parameters "repair --quiet --yes --include-recommended"
 
 		##*===============================================
 		##* POST-REPAIR
@@ -257,8 +257,8 @@ Catch {
 # SIG # Begin signature block
 # MIImVgYJKoZIhvcNAQcCoIImRzCCJkMCAQExDzANBglghkgBZQMEAgEFADB5Bgor
 # BgEEAYI3AgEEoGswaTA0BgorBgEEAYI3AgEeMCYCAwEAAAQQH8w7YFlLCE63JNLG
-# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCB6Cm/Q+FZCH9Pf
-# 62iL5sNbL/xl63nizHf4fsyW5/Oo7KCCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
+# KX7zUQIBAAIBAAIBAAIBAAIBADAxMA0GCWCGSAFlAwQCAQUABCCvrcHaq3Vx2Ho+
+# Rh1ScWS3XaENBd0XYmZkWLWMFDYOWKCCH8EwggVvMIIEV6ADAgECAhBI/JO0YFWU
 # jTanyYqJ1pQWMA0GCSqGSIb3DQEBDAUAMHsxCzAJBgNVBAYTAkdCMRswGQYDVQQI
 # DBJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcMB1NhbGZvcmQxGjAYBgNVBAoM
 # EUNvbW9kbyBDQSBMaW1pdGVkMSEwHwYDVQQDDBhBQUEgQ2VydGlmaWNhdGUgU2Vy
@@ -432,32 +432,32 @@ Catch {
 # ZDErMCkGA1UEAxMiU2VjdGlnbyBQdWJsaWMgQ29kZSBTaWduaW5nIENBIFIzNgIR
 # AKVN33D73PFMVIK48rFyyjEwDQYJYIZIAWUDBAIBBQCggYQwGAYKKwYBBAGCNwIB
 # DDEKMAigAoAAoQKAADAZBgkqhkiG9w0BCQMxDAYKKwYBBAGCNwIBBDAcBgorBgEE
-# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQg5QhooDZLPMAb
-# asC/5YvbmzCsT/fbjg40UbcNQN/zcZswDQYJKoZIhvcNAQEBBQAEggGANE7s8dCb
-# vFzfY5bm3iE1//pZlJLKMDsaVDwr30HXuXCVNV3bBdYciS0pC+fYWE7rs3eIi4yJ
-# 1yHbXqQCcCNveyGmxY9G4j8iq1wi/vnwdhGhx7EloYqApebZJtKuCWXccAO/Do0i
-# gQewmPMeCVPjD3TBreiE5Tjp1CeI7amL+WMTu6bCs0WnELkmpaPZObJ7+brAc1Le
-# 5bDfuxyJcyCai8wJEgQD54FwEOQz1TfOEr19LzSQcoV1BBjZsQOUL1IbX1hN8j1u
-# 0wtrZ8351d8/Nx1G48U236zJk8JlUZQvKHRUagZELei0DudtrePE8E0xLzTK9qx9
-# GLq+1xfECuuFWBlwUJTtCDywBCTNvW9PSJ/VqwF3GCvmlezhuW1zOrCf85SkrED+
-# 84Eyr6Kkq4Bn8QahcMnasdlvyDXRKh6wl6MujyeVwfg0DXv2X98f2PGcIao5ur43
-# hRxdJL08juX+qikEGKVmhRk1FFijpkxoln33/Jss20/zh+xF/GBqKumZoYIDTDCC
+# AYI3AgELMQ4wDAYKKwYBBAGCNwIBFTAvBgkqhkiG9w0BCQQxIgQgP0gIrkdKfFby
+# 494RY2gZzsgslu3d1VBjzCliKFkHbrYwDQYJKoZIhvcNAQEBBQAEggGAZDLaBRMQ
+# 0hRHUyJTP3AHNecvIGJJ5WhSHoNdqVEMPRpsMRGdD4LJZgBQ2dSFU4H2YOFrgwbH
+# OH9SbS5CUYEZXwIeMFiQT2TVPkuvz7Poi5GDis12U15sSsZWrnUuIH+u+YXNHtLu
+# LtCfnBAS0+3gMXGYPSaqTRjN+XmffDULpe8YOUvwqu0XLkzbt1L98N0f7qr72dvh
+# ORo9pnGwyRXLR428Csl2dA0EdHeEp8kU7TeMBcJrc4Y9+PIbuojAYD9RTXYEoKIW
+# FlCEZfLn1RMAtw90Cc9m7vUqzAhFQTNRJW0yZYsvSjCGSrLPOTnhhH+anvr4SKua
+# hkDIESvJ8Y3ebkxMvekh2ZWVwPHwLP/0tx4KCorhd3Yh/W1WpvU/CTTcEzOcIZqr
+# d+r1kQZIGqGbRuZVDaTHbVdQ6F8n29JWbIx2/tgvQk3Zhf6rGh/8k+N6C2WGD60K
+# 1XQIyLLy74Z5mZnfhQNh10rWmdv+wC9nQEJx1Es04kOBbBhYPHGIihC8oYIDTDCC
 # A0gGCSqGSIb3DQEJBjGCAzkwggM1AgEBMIGSMH0xCzAJBgNVBAYTAkdCMRswGQYD
 # VQQIExJHcmVhdGVyIE1hbmNoZXN0ZXIxEDAOBgNVBAcTB1NhbGZvcmQxGDAWBgNV
 # BAoTD1NlY3RpZ28gTGltaXRlZDElMCMGA1UEAxMcU2VjdGlnbyBSU0EgVGltZSBT
 # dGFtcGluZyBDQQIRAJA5f5rSSjoT8r2RXwg4qUMwDQYJYIZIAWUDBAICBQCgeTAY
-# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMjA3MTQy
-# MDQxMDVaMD8GCSqGSIb3DQEJBDEyBDClHI8XR38XOTGCM0S/sPiSoO5qfdJcaPt5
-# p/g4w9pfUCF9dOFB3AviuljTrQRpqXUwDQYJKoZIhvcNAQEBBQAEggIAKPa7V1e2
-# DJIYqZb555ib4n6ActTtU007a2gc5tqOP089Et6fqOPAlaGWFynDRvSu+9SDbGRS
-# QgCTZnD9bjT7kKn4HluWpSMpMvqg4XFVlB56koVhqJHQXAlkHXhKazoyExSunMli
-# jPcffa7XLWRNML/UwTOnMcO6vehU/FHieEBcm+225KNxutIMuLuVhtOVW7Iawnvt
-# XG83wYOfpxdbNB+VXRBd3NkHgu1pblpo6xJSFyyzmffsvo+NCPuDWNWJs/S4lSbX
-# CYmxkW1boCnz9th/Vsr6UjnWOAzIUD7lgabXfwr0dqcMGtz/IN7x8eA4G+a9KrPt
-# ZJzi7Dkc4CbOJfNzhMAe1667jeN81WzmdmAl6BHWCN7qIIfWPbca0xnXjNbSfQhV
-# LE4EV8+ewNNGQKj5uFTI+5v0uHXtZVTQ7PuyeYrfiyoVIXJlCzilKxSXBuGlC5E6
-# CIkQ3LUSv/RgikUdbm/Kf0A0ot2+OugwSo17lko2/4ITDCbGSrjeG466kPiqVVNG
-# Bl3+Fc+IIg5EdNrxWlBbSotsxF19lwAhXMH6VtQNowEp38SHpoaXaXfyt3fYw236
-# 2HzmsMKngZOyNOdCLJ6CEjy2CvUGQp0rGil7TlwY6mB4W7nLzxv7elM9nHdaiqVy
-# W2w6XKS/yokiML0q1aukfM0geLeY+aVU860=
+# BgkqhkiG9w0BCQMxCwYJKoZIhvcNAQcBMBwGCSqGSIb3DQEJBTEPFw0yMzA1MDUx
+# NTQyNDRaMD8GCSqGSIb3DQEJBDEyBDDCoK0X5kJbty5Aw3clB5HK8VVo5QBiVBIv
+# DsncL3DX/Um3GcaWzWrSCck4UUhQnSAwDQYJKoZIhvcNAQEBBQAEggIAjwRDaOkt
+# 56NJ1yOM7QdogK76gQvHDpGiGx9n2qJh9h8RLmOSLQMVvqzhBmqj0UF0Krm35bmB
+# WjoLf1nm4aoOCUnnd9ItO2kXaUetPF+mp0CvQoy0j6QW3C8dBPhIv/RJPyD8vUH0
+# ETWYOoKAokx+fHeJn42JAYuD1qHymdrLfXgec2z045/aA/pVuikhNnQD4NveyYqj
+# sIVsR24JLVc6NVkZNFE4/+cxSgMpRn9zApsYDfZX3NGKrV+Q9srRgNQjkrRD4+UI
+# 6ZXnKOJIJj8AOOurOivZ25dw9dIfmC7eu+s98CmFZf++m7oAoBmKOzXpTm0HzWot
+# aJNa4BoGvkSCvZrVcOqqxuCch2qEs9wM7B3dYHXb/X22ukvfKKcXwaqFmGD8OfaU
+# 2INn8uXDT3RWNZMzTD7jtJ0AzUyg1qoHZu7wWzjuWHCK2hh0ozVsMPnzy1Y6rtgj
+# BqO26NYYifZaHxE4WhNTzr80FneUEGDUqrHEpVuE6eSs6exGOllBI4jlpBr2XOV5
+# cR+GH80gKEibEsdxPmhgzJ1GzINpzsAsUxJw7QM57qJ+yLA5bUAgz/e6P36jejCh
+# U4Vc4MtMFcMRp8FcLOmABxjJSP/1xUAFpAxkGGCSfkTSLN9J2IHZ8QEWKfSgvdQz
+# OYyWSBV1JNAOT8nRL7Ls0aEc401YtjDCCPo=
 # SIG # End signature block
